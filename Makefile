@@ -5,8 +5,10 @@ TARGET = iphone:latest:7.0
 
 include theos/makefiles/common.mk
 
+SRC = $(wildcard src/*.m)
+
 TWEAK_NAME = WeChatRedEnvelop
-WeChatRedEnvelop_FILES = Tweak.xm XGPayingViewController.m WeChatRedEnvelopParam.m
+WeChatRedEnvelop_FILES = $(wildcard src/*.m) src/Tweak.xm
 WeChatRedEnvelop_FRAMEWORKS = UIKit
 
 include $(THEOS_MAKE_PATH)/tweak.mk

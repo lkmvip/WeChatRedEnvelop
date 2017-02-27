@@ -10,15 +10,7 @@
 
 @interface WeChatRedEnvelopParam : NSObject
 
-+ (instancetype)sharedInstance;
-
 - (NSDictionary *)toParams;
-
-/** 开关控制 */
-@property (assign, nonatomic) BOOL autoReceiveRedEnvelop; //:< 用于标记是否为自动抢红包
-@property (assign, nonatomic) BOOL redEnvelopSwitchOn;
-@property (assign, nonatomic) BOOL redEnvelopInChatRoomFromOther;
-@property (assign, nonatomic) BOOL redEnvelopInChatRoomFromMe;
 
 @property (strong, nonatomic) NSString *msgType;
 @property (strong, nonatomic) NSString *sendId;
@@ -27,6 +19,7 @@
 @property (strong, nonatomic) NSString *headImg;
 @property (strong, nonatomic) NSString *nativeUrl;
 @property (strong, nonatomic) NSString *sessionUserName;
+@property (strong, nonatomic) NSString *sign;
 @property (strong, nonatomic) NSString *timingIdentifier;
 
 @end
